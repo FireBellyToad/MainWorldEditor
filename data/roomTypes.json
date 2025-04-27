@@ -1,0 +1,25 @@
+{
+  "types": [
+    "EMPTY_SPACE",
+    "CASUAL",
+    "CEMETERY_TOP",
+    "CEMETERY_CENTER",
+    "CEMETERY_RIGHT",
+    "CHURCH_ENTRANCE",
+    "CHURCH_RIGHT",
+    "CHURCH_BOTTOM",
+    "CHURCH_LEFT",
+    "TREE_STUMP",
+    "BOAT",
+    "START_POINT",
+    "CRUCIFIED",
+    "FINAL",
+    "BOAT_LEFT",
+    "BOAT_DOWN",
+    "INFERNUM",
+    "START_LEFT",
+    "START_RIGHT",
+    "PEDESTAL",
+    "TEST"
+  ]
+}

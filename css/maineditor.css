@@ -1,0 +1,46 @@
+/* Custom styles */
+
+/* isprired by custom styles available on https://css.winterveil.net/ */
+.nav-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    /* Adjust the space between columns as needed */
+}
+
+.nav-columns>nav {
+    flex: 1;
+    /* Allows each child div to grow equally */
+    min-width: 250px;
+    /* Prevents the columns from getting too narrow before stacking */
+}
+
+@media (max-width: 600px) {
+    .nav-columns {
+        flex-direction: column;
+    }
+}
+
+
+p>label>span {
+    font-style: italic;
+}
+
+canvas {
+    border: 1px solid var(--fg);
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: dodgerblue;
+    padding: 10px;
+  }
+  .container > div {
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+  }

@@ -1,0 +1,63 @@
+<head>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- OSR Sytle sheet -->
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/magick.css">
+    <link rel="stylesheet" href="./css/maineditor.css">
+
+    <!-- All custom Javascript must be imported here -->
+    <!-- IMPORTANT: entities and utils go BEFORE the UI components -->
+
+    <!-- Components here -->
+    <script src="./js/main.js"></script>
+
+
+</head>
+
+
+<!-- x-data gives alpine.js reactivity to whole body -->
+
+<body>
+    <main>
+        <div x-data="main">
+
+            <!-- Navigator -->
+            <div class="nav-columns">
+                <nav>
+                    <button>Load</button>
+                    <button>Save</button>
+                </nav>
+            </div>
+
+            <!-- Main section.-->
+            <div class="container">
+
+
+                <template x-for="room in rooms">
+                <fieldset>
+                    <label>Type</label>
+                    <select>
+                        <template x-for="type in roomTypes">
+                            <option x-text="type"></option>
+                        </template>
+                    </select>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </fieldset>
+            </template>
+
+                
+
+            </div>
+        </div>
+
+        <footer> </footer>
+    </main>
+
+
+</body>
