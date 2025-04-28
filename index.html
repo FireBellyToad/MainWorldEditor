@@ -12,6 +12,7 @@
     <!-- IMPORTANT: entities and utils go BEFORE the UI components -->
 
     <!-- Components here -->
+    <script src="./js/models.js"></script>
     <script src="./js/main.js"></script>
 
 
@@ -33,26 +34,31 @@
             </div>
 
             <!-- Main section.-->
-            <div class="container">
+            <div class="rooms-grid"  :style="{'grid-template-columns':dynamicGrid}">
 
+                <template x-for="room in roomsArray">
+                    <fieldset class="rooms-grid-element">
+                        <div></div>
+                        <button x-text="room.upBoundary"></button>
+                        <div></div>
 
-                <template x-for="room in rooms">
-                <fieldset>
-                    <label>Type</label>
-                    <select>
-                        <template x-for="type in roomTypes">
-                            <option x-text="type"></option>
-                        </template>
-                    </select>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                </fieldset>
-            </template>
+                        <button x-text="room.leftBoundary"></button>
+                        <div>
+                            <label x-text="'x: '+ room.x + ', y: ' + room.y"></label><br><br>
+                            <select x-model="room.roomType">
+                                <template x-for="type in roomTypes">
+                                    <option x-text="type" :selected="type === room.roomType"></option>
+                                </template>
+                            </select>
+                        </div>
+                        <button x-text="room.rightBoundary"></button>
 
+                        <div></div>
+                        <button x-text="room.downBoundary"></button>
+                        <div></div>
+                    </fieldset>
+                </template>
                 
-
             </div>
         </div>
 

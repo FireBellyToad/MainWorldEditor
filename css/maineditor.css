@@ -1,4 +1,7 @@
 /* Custom styles */
+main {
+    margin: 5px !important;
+}
 
 /* isprired by custom styles available on https://css.winterveil.net/ */
 .nav-columns {
@@ -31,16 +34,46 @@ canvas {
 }
 
 
-.container {
+/* Rooms Grid */
+.rooms-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: dodgerblue;
     padding: 10px;
-  }
-  .container > div {
-    background-color: #f1f1f1;
-    border: 1px solid black;
+  grid-gap: 1vh;
+}
+
+.rooms-grid>fieldset {
     padding: 10px;
     font-size: 30px;
     text-align: center;
-  }
+}
+
+/* Rooms form */
+.rooms-grid-element {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  grid-gap: 1vh;
+}
+
+.rooms-grid-element>div,
+.rooms-grid-element>button{
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.rooms-grid-element>button{
+    height: 80px !important;
+    width: 80px !important;
+    margin: auto;
+}
+
+
+option {
+    color: black
+}
+
+select,
+option {
+    text-align: center
+}
